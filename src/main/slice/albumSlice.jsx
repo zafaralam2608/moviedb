@@ -11,8 +11,7 @@ export const albumSlice = createSlice({
   name: 'album',
   initialState,
   reducers: {
-    retrieve: (state) => {
-      console.log(state.value);
+    retrieve: () => {
     },
   },
 });
