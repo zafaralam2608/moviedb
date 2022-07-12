@@ -5,13 +5,15 @@ import { IMAGE_URL } from '../constant/data';
 
 function Thumbnail({ id, title, source }) {
   return (
-    <Card sx={{ margin: '10px', padding: '10px' }}>
-      <CardHeader title={id} subheader={title.slice(0, 27)} />
+    <Card
+      sx={{ width: '270px', margin: '10px' }}
+    >
       <CardMedia
         component="img"
-        sx={{ height: '375px', width: '250px' }}
+        sx={{ height: '375px', width: '250px', margin: '10px' }}
         src={`${IMAGE_URL}${source}`}
       />
+      <CardHeader title={id} subheader={title} />
     </Card>
   );
 }
