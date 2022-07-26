@@ -1,13 +1,13 @@
 {
-  "name": "marvel",
+  "name": "imdb",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://zafaralam2608.github.io/imdb",
   "dependencies": {
     "@emotion/styled": "11.9.3",
     "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.8.5",
-    "@reduxjs/toolkit": "^1.8.2",
+    "@mui/material": "^5.9.1",
+    "@reduxjs/toolkit": "^1.8.3",
     "axios": "^0.27.2",
     "prop-types": "15.8.1",
     "react": "^18.2.0",
@@ -36,10 +36,10 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.18.0",
+    "eslint": "^8.20.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0"
   }

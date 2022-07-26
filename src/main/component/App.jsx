@@ -1,9 +1,9 @@
 import React from 'react';
-import Album from '../common/Album';
+import Dashboard from './Dashboard';
 
 function App() {
   return (
-    <Album />
+    <Dashboard />
   );
 }
 

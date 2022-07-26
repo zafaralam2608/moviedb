@@ -12,7 +12,7 @@ function Album() {
             (item) => (
               <Thumbnail
                 key={item.id}
-                id={item.id}
+                id={item.release_date}
                 title={item.original_title}
                 source={item.poster_path}
               />
