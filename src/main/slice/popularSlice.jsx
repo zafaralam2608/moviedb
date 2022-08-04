@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSelector, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { API_MOVIE_POPULAR } from '../constant/api';
+import { buildApi } from '../constant/api';
 
 export const retrieve = createAsyncThunk('popular/retrieve', async (_, thunkApi) => {
   try {
-    const response = await axios.get(API_MOVIE_POPULAR);
+    const response = await axios.get(buildApi('movie/popular'));
     return await response.data;
   } catch (error) {
     return thunkApi.rejectWithValue(error.response.data);
