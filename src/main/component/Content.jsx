@@ -1,20 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Box, Container, Toolbar } from '@mui/material';
+import { Box, Toolbar } from '@mui/material';
 import Dashboard from './Dashboard';
+import Profile from '../common/Profile';
 
 function Content() {
   return (
     <Box
       component="main"
-      sx={{ flexGrow: 1, height: '100vh', overflow: 'auto' }}
+      sx={{
+        flexGrow: 1, height: '100vh', overflow: 'auto', width: '100%',
+      }}
     >
       <Toolbar />
-      <Container maxWidth="100%" sx={{ mt: 5, mb: 5 }}>
-        <Routes>
-          <Route index element={<Dashboard />} />
-        </Routes>
-      </Container>
+      <Routes>
+        <Route index element={<Profile />} />
+        <Route path="#/home" element={<Dashboard />} />
+      </Routes>
     </Box>
   );
 }

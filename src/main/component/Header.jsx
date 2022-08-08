@@ -1,33 +1,24 @@
 import React from 'react';
 import { IconButton, Toolbar, Typography } from '@mui/material';
 import { Menu } from '@mui/icons-material';
-import PropTypes from 'prop-types';
-import AppBar from '../common/AppBar';
+import AppBar from '@mui/material/AppBar';
 
-function Header({ open, openDrawer }) {
+function Header() {
   return (
-    <AppBar position="absolute" open={open}>
-      <Toolbar sx={{ pr: '24px', textAlign: 'center' }}>
+    <AppBar position="absolute">
+      <Toolbar sx={{ pr: '24px' }}>
         <IconButton
           edge="start"
           color="default"
-          aria-label="open drawer"
-          sx={{ marginRight: '36px', ...(open && { display: 'none' }) }}
-          onClick={() => openDrawer()}
         >
           <Menu />
         </IconButton>
         <Typography component="h1" variant="h6" noWrap sx={{ flexGrow: 1 }}>
-          Insert title here
+          Menu
         </Typography>
       </Toolbar>
     </AppBar>
   );
 }
-
-Header.propTypes = {
-  open: PropTypes.bool.isRequired,
-  openDrawer: PropTypes.func.isRequired,
-};
 
 export default Header;
