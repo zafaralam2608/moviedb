@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Box, Toolbar } from '@mui/material';
 import Dashboard from './Dashboard';
 import Profile from '../common/Profile';
@@ -13,10 +13,12 @@ function Content() {
       }}
     >
       <Toolbar />
-      <Routes>
-        <Route index element={<Profile />} />
-        <Route path="#/home" element={<Dashboard />} />
-      </Routes>
+      <HashRouter>
+        <Routes>
+          <Route index element={<Profile />} />
+          <Route path="#/home" element={<Dashboard />} />
+        </Routes>
+      </HashRouter>
     </Box>
   );
 }

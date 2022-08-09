@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Accordion, AccordionSummary, ButtonGroup, CardActionArea, Chip, Container, Divider, Grid, Stack,
+  Accordion, AccordionSummary, Box, ButtonGroup, CardActionArea, Chip, Divider, Grid, Stack,
   Typography,
 } from '@mui/material';
 import { ExpandMore, PermMedia, Subscriptions } from '@mui/icons-material';
@@ -11,7 +11,7 @@ function Profile() {
   const source = profile.poster_path;
   const vid = profile.backdrop_path;
   return (
-    <Container>
+    <Box>
       <Grid container sx={{ height: '420px', width: '1280px', justifyContent: 'center' }}>
         <Grid item>
           <img src={IMAGE_URL + source} alt="poster" width="284.44px" height="420.96px" />
@@ -59,7 +59,7 @@ function Profile() {
           </Stack>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 

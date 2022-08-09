@@ -1,18 +1,15 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material';
-import Layout from './Layout';
+import { Box, CssBaseline } from '@mui/material';
+import Content from './Content';
+import Header from './Header';
 
 function App() {
-  const theme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-  });
-
   return (
-    <ThemeProvider theme={theme}>
-      <Layout />
-    </ThemeProvider>
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <Header />
+      <Content />
+    </Box>
   );
 }
 
