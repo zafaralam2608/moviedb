@@ -5,8 +5,8 @@ import AppBar from '@mui/material/AppBar';
 
 function Header() {
   return (
-    <AppBar position="absolute">
-      <Toolbar sx={{ pr: '24px' }}>
+    <AppBar position="absolute" sx={{ alignItems: 'center' }}>
+      <Toolbar sx={{ width: '1280px', padding: 0 }}>
         <IconButton
           edge="start"
           color="default"
