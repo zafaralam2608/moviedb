@@ -8,7 +8,7 @@ function SummaryLeft() {
   return (
     <Grid container direction="column" sx={{ width: '727px', justifyContent: 'left' }}>
       <Grid container direction="column" sx={{ padding: '16px 0' }}>
-        <Stack direction="row" spacing={1} sx={{ padding: '0 0 8px 0' }}>
+        <Stack direction="row" spacing={1} sx={{ paddingBottom: '8px' }}>
           {profile.genres.map((item) => (
             <Chip label={item.name} />
           ))}
