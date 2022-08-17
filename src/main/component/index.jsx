@@ -1,13 +1,14 @@
 import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import { Box, CssBaseline, Toolbar } from '@mui/material';
+import { CssBaseline, ThemeProvider, Toolbar } from '@mui/material';
 import Dashboard from './Dashboard';
 import Header from './Header';
 import Movie from './movie';
+import { darkTheme } from '../constant/theme';
 
 function App() {
   return (
-    <Box>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Header />
       <Toolbar />
@@ -17,7 +18,7 @@ function App() {
           <Route path="#/home" element={<Dashboard />} />
         </Routes>
       </HashRouter>
-    </Box>
+    </ThemeProvider>
   );
 }
 

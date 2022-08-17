@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import profile from '../../../../constant/profile';
 
-function DetailsLeft() {
+function SummaryLeft() {
   return (
     <Grid container direction="column" sx={{ width: '727px', justifyContent: 'left' }}>
       <Grid container direction="column" sx={{ padding: '16px 0' }}>
@@ -28,4 +28,4 @@ function DetailsLeft() {
   );
 }
 
-export default DetailsLeft;
+export default SummaryLeft;

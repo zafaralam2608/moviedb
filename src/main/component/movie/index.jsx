@@ -1,11 +1,13 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import Top from './top';
+import Bottom from './bottom';
 
 function Movie() {
   return (
-    <Grid container justifyContent="center">
+    <Grid container>
       <Top />
+      <Bottom />
     </Grid>
   );
 }

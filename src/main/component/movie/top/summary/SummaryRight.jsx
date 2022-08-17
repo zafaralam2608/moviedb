@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import { ConfirmationNumber, KeyboardArrowDownOutlined } from '@mui/icons-material';
 
-function DetailsRight() {
+function SummaryRight() {
   return (
     <Grid container direction="column" sx={{ width: '425px', justifyContent: 'left', padding: '16px 0 0 0' }}>
       <Grid container direction="column">
@@ -29,4 +29,4 @@ function DetailsRight() {
   );
 }
 
-export default DetailsRight;
+export default SummaryRight;

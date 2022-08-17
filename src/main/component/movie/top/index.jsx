@@ -6,10 +6,12 @@ import Summary from './summary';
 
 function Top() {
   return (
-    <Grid container direction="column" width="1280px">
-      <ActionBar />
-      <TitleBar />
-      <Summary />
+    <Grid container justifyContent="center">
+      <Grid container direction="column" width="1280px">
+        <ActionBar />
+        <TitleBar />
+        <Summary />
+      </Grid>
     </Grid>
   );
 }
