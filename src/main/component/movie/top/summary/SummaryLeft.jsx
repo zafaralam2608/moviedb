@@ -10,7 +10,7 @@ function SummaryLeft() {
       <Grid container direction="column" sx={{ padding: '16px 0' }}>
         <Stack direction="row" spacing={1} sx={{ paddingBottom: '8px' }}>
           {profile.genres.map((item) => (
-            <Chip label={item.name} />
+            <Chip key={`chip-${item.name}`} label={item.name} />
           ))}
         </Stack>
         <Typography paragraph variant="body1">{profile.overview}</Typography>
