@@ -13,9 +13,9 @@ export const retrieveMovieDetails = createAsyncThunk('movieDetails/retrieve', as
 });
 
 const initialState = {
-  loading: false,
-  error: '',
-  data: MovieDetailsInitial,
+  movieDetailsLoading: false,
+  movieDetailsError: '',
+  movieDetailsData: MovieDetailsInitial,
 };
 
 const movieDetailsSlice = createSlice({
@@ -24,15 +24,15 @@ const movieDetailsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(retrieveMovieDetails.pending, (state) => {
-      state.loading = true;
+      state.movieDetailsLoading = true;
     });
     builder.addCase(retrieveMovieDetails.rejected, (state, data) => {
-      state.loading = false;
-      state.error = data.payload.status_message;
+      state.movieDetailsLoading = false;
+      state.movieDetailsError = data.payload.status_message;
     });
     builder.addCase(retrieveMovieDetails.fulfilled, (state, data) => {
-      state.loading = false;
-      state.data = data.payload;
+      state.movieDetailsLoading = false;
+      state.movieDetailsData = data.payload;
     });
   },
 });

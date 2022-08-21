@@ -2,18 +2,18 @@ import React from 'react';
 import {
   Chip, Divider, Grid, Stack, Typography,
 } from '@mui/material';
-import profile from '../../../../constant/profile';
+import { MovieDetailsProps } from '../../../../props/movie/movieDetailsProps';
 
-function SummaryLeft() {
+function SummaryLeft({ movieDetailsData }) {
   return (
     <Grid container direction="column" sx={{ width: '727px', justifyContent: 'left' }}>
       <Grid container direction="column" sx={{ padding: '16px 0' }}>
         <Stack direction="row" spacing={1} sx={{ paddingBottom: '8px' }}>
-          {profile.genres.map((item) => (
+          {movieDetailsData.genres.map((item) => (
             <Chip key={`chip-${item.name}`} label={item.name} />
           ))}
         </Stack>
-        <Typography paragraph variant="body1">{profile.overview}</Typography>
+        <Typography paragraph variant="body1">{movieDetailsData.overview}</Typography>
       </Grid>
       <Grid container direction="column">
         <Divider />
@@ -27,5 +27,9 @@ function SummaryLeft() {
     </Grid>
   );
 }
+
+SummaryLeft.propTypes = {
+  movieDetailsData: MovieDetailsProps.isRequired,
+};
 
 export default SummaryLeft;

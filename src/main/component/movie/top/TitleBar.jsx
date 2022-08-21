@@ -1,17 +1,17 @@
 import React from 'react';
 import { Toolbar } from '@mui/material';
-import PropTypes from 'prop-types';
+import { MovieDetailsProps } from '../../../props/movie/movieDetailsProps';
 
-function TitleBar({ originalTitle }) {
+function TitleBar({ movieDetailsData }) {
   return (
     <Toolbar>
-      {originalTitle}
+      {movieDetailsData.original_title}
     </Toolbar>
   );
 }
 
 TitleBar.propTypes = {
-  originalTitle: PropTypes.string.isRequired,
+  movieDetailsData: MovieDetailsProps.isRequired,
 };
 
 export default TitleBar;

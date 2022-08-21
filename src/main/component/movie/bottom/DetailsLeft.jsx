@@ -3,10 +3,12 @@ import {
   AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Grid, Typography,
 } from '@mui/material';
 import { KeyboardArrowRightOutlined } from '@mui/icons-material';
+import CardScroll from '../../../common/CardScroll';
+import { MovieImagesProps } from '../../../props/movie/movieImagesProps';
 
-function DetailsLeft() {
+function DetailsLeft({ movieImagesData }) {
   return (
-    <Grid container sx={{ width: '861px', justifyContent: 'left' }}>
+    <Grid container sx={{ width: '860px', justifyContent: 'left' }}>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
         <AccordionSummary
           sx={{ width: '100%', margin: '0 24px', border: '1px' }}
@@ -21,11 +23,11 @@ function DetailsLeft() {
         </CardActionArea>
         <Grid item sx={{ height: '282px' }}>TODO Vid</Grid>
       </Grid>
-      <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
-        <CardActionArea sx={{ textAlign: 'left' }} href="#/">
+      <Grid container sx={{ width: '100%', marginBottom: '8px', padding: '24px 0' }}>
+        <CardActionArea sx={{ textAlign: 'left', padding: '0 24px', marginBottom: '24px' }} href="#/">
           <Typography paragraph variant="h4">Photos</Typography>
         </CardActionArea>
-        <Grid item sx={{ height: '282px' }}>TODO Pic</Grid>
+        <CardScroll movieImagesData={movieImagesData} height="282px" />
       </Grid>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
         <CardActionArea sx={{ textAlign: 'left' }} href="#/">
@@ -66,5 +68,9 @@ function DetailsLeft() {
     </Grid>
   );
 }
+
+DetailsLeft.propTypes = {
+  movieImagesData: MovieImagesProps.isRequired,
+};
 
 export default DetailsLeft;

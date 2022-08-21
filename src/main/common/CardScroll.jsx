@@ -1,77 +1,24 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import {
-  Alert, Card, CardContent, CardHeader, Grid, ImageList, Skeleton, Snackbar,
-} from '@mui/material';
-import PropTypes from 'prop-types';
-import Thumbnail from './Thumbnail';
+import React from 'react';
+import { CardActionArea, Grid } from '@mui/material';
+import { MovieImagesProps } from '../props/movie/movieImagesProps';
+import { IMAGE_URL_W185 } from '../constant/api';
 
-function CardScroll({ title, selector, retrieve }) {
-  const def = Array.from(new Array(8));
-
-  const dispatch = useDispatch();
-  const { loading, error, data } = selector;
-
-  useEffect(() => {
-    dispatch(retrieve());
-  }, [dispatch]);
-
+function CardScroll({ movieImagesData }) {
   return (
-    <Card>
+    <Grid container wrap="nowrap" sx={{ overflow: 'hidden', padding: '0 24px' }}>
       {
-        error && (
-          <Snackbar open anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-            <Alert severity="error">{error}</Alert>
-          </Snackbar>
-        )
+        movieImagesData.backdrops.slice(0, 4).map((item) => (
+          <CardActionArea key={item.file_path.slice(1, 6)} href="#/" sx={{ width: '185px', height: '185px', marginRight: '24px' }}>
+            <img src={IMAGE_URL_W185 + item.file_path} alt="thumb" width="185px" height="185px" />
+          </CardActionArea>
+        ))
       }
-      <CardHeader title={title} sx={{ padding: '10px 0 0 10px' }} />
-      <CardContent sx={{ padding: '0 !important' }}>
-        {
-          (loading || error)
-            ? (
-              <Grid container justifyContent="space-evenly">
-                {
-                  def.map(() => (
-                    <Skeleton variant="rectangular" height={336.74} width={170} sx={{ margin: '5px' }} />
-                  ))
-                }
-              </Grid>
-            )
-            : (
-              <ImageList sx={{
-                margin: '0',
-                gridAutoFlow: 'column',
-                gridTemplateColumns: 'repeat(auto-fill,minmax(170px,1fr)) !important',
-                gridAutoColumns: 'minmax(170px, 1fr)',
-              }}
-              >
-                {
-                  data.results.map((item) => (
-                    <Thumbnail
-                      key={item.id}
-                      id={item.release_date}
-                      title={item.original_title}
-                      source={item.poster_path}
-                    />
-                  ))
-                }
-              </ImageList>
-            )
-        }
-      </CardContent>
-    </Card>
+    </Grid>
   );
 }
 
 CardScroll.propTypes = {
-  title: PropTypes.string.isRequired,
-  retrieve: PropTypes.func.isRequired,
-  selector: PropTypes.exact({
-    loading: PropTypes.bool.isRequired,
-    error: PropTypes.string.isRequired,
-    data: PropTypes.string.isRequired,
-  }).isRequired,
+  movieImagesData: MovieImagesProps.isRequired,
 };
 
 export default CardScroll;

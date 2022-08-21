@@ -5,20 +5,20 @@ import TitleBar from './TitleBar';
 import Summary from './summary';
 import { MovieDetailsProps } from '../../../props/movie/movieDetailsProps';
 
-function Top({ movieDetails }) {
+function Top({ movieDetailsData }) {
   return (
     <Grid container justifyContent="center">
       <Grid container direction="column" width="1280px">
         <ActionBar />
-        <TitleBar originalTitle={movieDetails.original_title} />
-        <Summary />
+        <TitleBar movieDetailsData={movieDetailsData} />
+        <Summary movieDetailsData={movieDetailsData} />
       </Grid>
     </Grid>
   );
 }
 
 Top.propTypes = {
-  movieDetails: MovieDetailsProps.isRequired,
+  movieDetailsData: MovieDetailsProps.isRequired,
 };
 
 export default Top;
