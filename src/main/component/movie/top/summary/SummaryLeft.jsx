@@ -6,15 +6,11 @@ import { MovieDetailsProps } from '../../../../props/movie/movieDetailsProps';
 import { MovieCreditsProps } from '../../../../props/movie/movieCreditsProps';
 
 function SummaryLeft({ movieDetailsData, movieCreditsData }) {
-  const acting = movieCreditsData.cast.filter((person) => person.known_for_department === 'Acting');
-  const first = acting.filter((actor) => actor.order === 0)[0];
-  const second = acting.filter((actor) => actor.order === 1)[0];
-  const third = acting.filter((actor) => actor.order === 2)[0];
-  const stars = `Stars    ${first.name}  -  ${second.name}  -  ${third.name}`;
+  const acting = movieCreditsData.cast.filter((person) => person.known_for_department === 'Acting').map((actor) => actor.name).slice(0, 3);
+  const stars = `Stars    ${acting.join('  -  ')}`;
 
-  const directing = movieCreditsData.crew.filter((person) => person.department === 'Directing');
-  const dir = directing.filter((director) => director.job === 'Director')[0];
-  const director = `Director  ${dir.name}`;
+  const directing = movieCreditsData.crew.filter((person) => person.department === 'Directing').filter((director) => director.job === 'Director')[0];
+  const director = `Director  ${directing.name}`;
 
   const writing = movieCreditsData.crew.filter((person) => person.department === 'Writing');
   const wri = writing.filter((writer) => writer.job === 'Writer');

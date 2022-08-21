@@ -6,15 +6,19 @@ import Bottom from './bottom';
 import { selectMovieDetails, retrieveMovieDetails } from '../../slice/movie/movieDetailsSlice';
 import { selectMovieCredits, retrieveMovieCredits } from '../../slice/movie/movieCreditsSlice';
 import { selectMovieImages, retrieveMovieImages } from '../../slice/movie/movieImagesSlice';
+import { selectMovieVideos, retrieveMovieVideos } from '../../slice/movie/movieVideosSlice';
 
 function Movie() {
   const dispatch = useDispatch();
   const { movieDetails } = useSelector(selectMovieDetails);
   const { movieCredits } = useSelector(selectMovieCredits);
   const { movieImages } = useSelector(selectMovieImages);
+  const { movieVideos } = useSelector(selectMovieVideos);
+
   const { movieDetailsLoading, movieDetailsError, movieDetailsData } = movieDetails;
   const { movieCreditsLoading, movieCreditsError, movieCreditsData } = movieCredits;
   const { movieImagesLoading, movieImagesError, movieImagesData } = movieImages;
+  const { movieVideosLoading, movieVideosError, movieVideosData } = movieVideos;
 
   useEffect(() => {
     if (!movieDetailsLoading && !movieDetailsError && !movieDetailsData) {
@@ -26,17 +30,20 @@ function Movie() {
     if (!movieImagesLoading && !movieImagesError && !movieImagesData) {
       dispatch(retrieveMovieImages());
     }
+    if (!movieVideosLoading && !movieVideosError && !movieVideosData) {
+      dispatch(retrieveMovieVideos());
+    }
   }, [dispatch]);
 
-  if (!movieDetailsData || !movieCreditsData || !movieImagesData) {
+  if (!movieDetailsData || !movieCreditsData || !movieImagesData || !movieVideosData) {
     return (<div>fetching---</div>);
   }
 
-  if (movieDetailsLoading || movieCreditsLoading || movieImagesLoading) {
+  if (movieDetailsLoading || movieCreditsLoading || movieImagesLoading || movieVideosLoading) {
     return (<div>wait...</div>);
   }
 
-  if (movieDetailsError || movieCreditsError || movieImagesError) {
+  if (movieDetailsError || movieCreditsError || movieImagesError || movieVideosError) {
     return (<div>error!!!</div>);
   }
 
@@ -45,6 +52,8 @@ function Movie() {
       <Top
         movieDetailsData={movieDetailsData}
         movieCreditsData={movieCreditsData}
+        movieImagesData={movieImagesData}
+        movieVideosData={movieVideosData}
       />
       <Bottom movieImagesData={movieImagesData} />
     </Grid>
