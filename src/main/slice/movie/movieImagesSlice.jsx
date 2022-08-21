@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSelector, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { API_MOVIE_IMAGES_TEMP } from '../../constant/api';
-import { MovieImagesInitial } from '../../props/movie/movieImagesProps';
 
 export const retrieveMovieImages = createAsyncThunk('movieImages/retrieve', async (_, thunkApi) => {
   try {
@@ -13,9 +12,9 @@ export const retrieveMovieImages = createAsyncThunk('movieImages/retrieve', asyn
 });
 
 const initialState = {
-  movieImagesLoading: false,
-  movieImagesError: '',
-  movieImagesData: MovieImagesInitial,
+  movieImagesLoading: null,
+  movieImagesError: null,
+  movieImagesData: null,
 };
 
 const movieImagesSlice = createSlice({

@@ -10,6 +10,13 @@ const imageInitial = {
   width: 0,
 };
 
+export const MovieImagesInitial = {
+  backdrops: [imageInitial],
+  id: 0,
+  logos: [imageInitial],
+  posters: [imageInitial],
+};
+
 const imageProps = PropTypes.shape({
   aspect_ratio: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
@@ -19,13 +26,6 @@ const imageProps = PropTypes.shape({
   vote_count: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
 });
-
-export const MovieImagesInitial = {
-  backdrops: [imageInitial],
-  id: 0,
-  logos: [imageInitial],
-  posters: [imageInitial],
-};
 
 export const MovieImagesProps = PropTypes.shape({
   backdrops: PropTypes.arrayOf(imageProps).isRequired,

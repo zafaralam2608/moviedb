@@ -4,13 +4,17 @@ import MediaBox from './MediaBox';
 import SummaryLeft from './SummaryLeft';
 import SummaryRight from './SummaryRight';
 import { MovieDetailsProps } from '../../../../props/movie/movieDetailsProps';
+import { MovieCreditsProps } from '../../../../props/movie/movieCreditsProps';
 
-function Summary({ movieDetailsData }) {
+function Summary({ movieDetailsData, movieCreditsData }) {
   return (
     <Grid container>
       <MediaBox movieDetailsData={movieDetailsData} />
       <Grid container sx={{ justifyContent: 'space-between', padding: '0 24px 8px 24px' }}>
-        <SummaryLeft movieDetailsData={movieDetailsData} />
+        <SummaryLeft
+          movieDetailsData={movieDetailsData}
+          movieCreditsData={movieCreditsData}
+        />
         <SummaryRight />
       </Grid>
     </Grid>
@@ -19,6 +23,7 @@ function Summary({ movieDetailsData }) {
 
 Summary.propTypes = {
   movieDetailsData: MovieDetailsProps.isRequired,
+  movieCreditsData: MovieCreditsProps.isRequired,
 };
 
 export default Summary;
