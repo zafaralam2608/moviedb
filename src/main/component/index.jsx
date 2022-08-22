@@ -1,7 +1,8 @@
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import {
+  HashRouter, Navigate, Route, Routes,
+} from 'react-router-dom';
 import { CssBaseline, ThemeProvider, Toolbar } from '@mui/material';
-import Dashboard from './Dashboard';
 import Header from './Header';
 import Movie from './movie';
 import { darkTheme } from '../constant/theme';
@@ -14,8 +15,8 @@ function App() {
       <Toolbar />
       <HashRouter>
         <Routes>
-          <Route index element={<Movie />} />
-          <Route path="#/home" element={<Dashboard />} />
+          <Route index element={<Navigate to="title/616037" />} replace />
+          <Route path="title/:id" element={<Movie />} />
         </Routes>
       </HashRouter>
     </ThemeProvider>
