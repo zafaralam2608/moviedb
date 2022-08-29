@@ -1,61 +1,45 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { Grid } from '@mui/material';
 import Top from './top';
-import Bottom from './bottom';
 import { selectMovieDetails, retrieveMovieDetails } from '../../slice/movie/movieDetailsSlice';
 import { selectMovieCredits, retrieveMovieCredits } from '../../slice/movie/movieCreditsSlice';
 import { selectMovieImages, retrieveMovieImages } from '../../slice/movie/movieImagesSlice';
 import { selectMovieVideos, retrieveMovieVideos } from '../../slice/movie/movieVideosSlice';
 
 function Movie() {
+  const { id } = useParams();
   const dispatch = useDispatch();
+
   const { movieDetails } = useSelector(selectMovieDetails);
   const { movieCredits } = useSelector(selectMovieCredits);
   const { movieImages } = useSelector(selectMovieImages);
   const { movieVideos } = useSelector(selectMovieVideos);
 
-  const { movieDetailsLoading, movieDetailsError, movieDetailsData } = movieDetails;
-  const { movieCreditsLoading, movieCreditsError, movieCreditsData } = movieCredits;
-  const { movieImagesLoading, movieImagesError, movieImagesData } = movieImages;
-  const { movieVideosLoading, movieVideosError, movieVideosData } = movieVideos;
+  const { movieDetailsLoaded } = movieDetails;
+  const { movieCreditsLoaded } = movieCredits;
+  const { movieImagesLoaded } = movieImages;
+  const { movieVideosLoaded } = movieVideos;
 
   useEffect(() => {
-    if (!movieDetailsLoading && !movieDetailsError && !movieDetailsData) {
-      dispatch(retrieveMovieDetails());
+    if (movieDetailsLoaded == null) {
+      dispatch(retrieveMovieDetails(id));
     }
-    if (!movieCreditsLoading && !movieCreditsError && !movieCreditsData) {
-      dispatch(retrieveMovieCredits());
+    if (movieCreditsLoaded == null) {
+      dispatch(retrieveMovieCredits(id));
     }
-    if (!movieImagesLoading && !movieImagesError && !movieImagesData) {
-      dispatch(retrieveMovieImages());
+    if (movieImagesLoaded == null) {
+      dispatch(retrieveMovieImages(id));
     }
-    if (!movieVideosLoading && !movieVideosError && !movieVideosData) {
-      dispatch(retrieveMovieVideos());
+    if (movieVideosLoaded == null) {
+      dispatch(retrieveMovieVideos(id));
     }
   }, [dispatch]);
 
-  if (!movieDetailsData || !movieCreditsData || !movieImagesData || !movieVideosData) {
-    return (<div>fetching---</div>);
-  }
-
-  if (movieDetailsLoading || movieCreditsLoading || movieImagesLoading || movieVideosLoading) {
-    return (<div>wait...</div>);
-  }
-
-  if (movieDetailsError || movieCreditsError || movieImagesError || movieVideosError) {
-    return (<div>error!!!</div>);
-  }
-
   return (
     <Grid container>
-      <Top
-        movieDetailsData={movieDetailsData}
-        movieCreditsData={movieCreditsData}
-        movieImagesData={movieImagesData}
-        movieVideosData={movieVideosData}
-      />
-      <Bottom movieImagesData={movieImagesData} />
+      <Top />
     </Grid>
   );
 }
