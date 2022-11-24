@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/imdb/static/js/main.8f87cbfc.js",
-    "index.html": "/imdb/index.html"
+    "main.js": "/moviedb/static/js/main.f00523a8.js",
+    "index.html": "/moviedb/index.html"
   },
   "entrypoints": [
-    "static/js/main.8f87cbfc.js"
+    "static/js/main.f00523a8.js"
   ]
 }
