@@ -1,5 +1,5 @@
 # IMDb
-[View Demo](https://zafaralam2608.github.io/imdb/)
+[View Demo](https://zafaralam2608.github.io/moviedb/)
 
 ## About the project
 
@@ -22,8 +22,8 @@ A ReactJS based web interface to view movies, TV shows, actors and other related
 ## Installation
 Use the below commands to launch the app
 ```
-git clone https://github.com/zafaralam2608/imdb.git
-cd imdb
+git clone https://github.com/zafaralam2608/moviedb.git
+cd moviedb
 npm install
 npm start
 ```
