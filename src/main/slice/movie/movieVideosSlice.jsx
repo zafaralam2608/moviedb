@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSelector, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { API_MOVIE_VIDEOS_TEMP } from '../../constant/api';
+import { movieVideos } from '../../constant/api';
 
-export const retrieveMovieVideos = createAsyncThunk('movieVideos/retrieve', async (_, thunkApi) => {
+export const retrieveMovieVideos = createAsyncThunk('movieVideos/retrieve', async (id, thunkApi) => {
   try {
-    const response = await axios.get(API_MOVIE_VIDEOS_TEMP);
+    const response = await axios.get(movieVideos(id));
     return await response.data;
   } catch (error) {
     return thunkApi.rejectWithValue(error.response.data);
@@ -12,7 +12,7 @@ export const retrieveMovieVideos = createAsyncThunk('movieVideos/retrieve', asyn
 });
 
 const initialState = {
-  movieVideosLoading: null,
+  movieVideosLoaded: null,
   movieVideosError: null,
   movieVideosData: null,
 };
@@ -23,14 +23,14 @@ const movieVideosSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(retrieveMovieVideos.pending, (state) => {
-      state.movieVideosLoading = true;
+      state.movieVideosLoaded = false;
     });
-    builder.addCase(retrieveMovieVideos.rejected, (state, data) => {
-      state.movieVideosLoading = false;
-      state.movieVideosError = data.payload.status_message;
+    builder.addCase(retrieveMovieVideos.rejected, (state) => {
+      state.movieVideosLoaded = true;
+      state.movieVideosError = 'Error retreiving movie videos';
     });
     builder.addCase(retrieveMovieVideos.fulfilled, (state, data) => {
-      state.movieVideosLoading = false;
+      state.movieVideosLoaded = true;
       state.movieVideosData = data.payload;
     });
   },

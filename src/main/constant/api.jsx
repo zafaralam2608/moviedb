@@ -11,7 +11,7 @@ export const IMAGE_URL_W185 = `${IMAGE_URL_ROOT}/w185`;
 export const IMAGE_URL_W500 = `${IMAGE_URL_ROOT}/w500`;
 export const IMAGE_URL_ORIGINAL = `${IMAGE_URL_ROOT}/original`;
 
-const URL_MOVIE = `${URL_ROOT}/movie/616037`;
+const URL_MOVIE = `${URL_ROOT}/movie`;
 const URL_MOVIE_LATEST = `${URL_MOVIE}/latest`;
 const URL_MOVIE_POPULAR = `${URL_MOVIE}/popular`;
 const URL_MOVIE_TOP = `${URL_MOVIE}/top_rated`;
