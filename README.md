@@ -1,4 +1,4 @@
-# IMDb
+# MovieDb
 [View Demo](https://zafaralam2608.github.io/moviedb/)
 
 ## About the project
