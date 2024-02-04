@@ -418,6 +418,88 @@ export const data = {
   total_results: 132
 }
 
+export const movieDetails = {
+  adult: false,
+  backdrop_path: '/b0PlSFdDwbyK0cf5RxwDpaOJQvQ.jpg',
+  belongs_to_collection: {
+    id: 948485,
+    name: 'The Batman Collection',
+    poster_path: '/tuzKA9K5Ae9IzaA0R9oAgbyhAI3.jpg',
+    backdrop_path: '/qS2ViQwlWUECiAdkIuEaJZoq0QW.jpg'
+  },
+  budget: 185000000,
+  genres: [
+    {
+      id: 80,
+      name: 'Crime'
+    },
+    {
+      id: 9648,
+      name: 'Mystery'
+    },
+    {
+      id: 53,
+      name: 'Thriller'
+    }
+  ],
+  homepage: 'https://www.thebatman.com',
+  id: 414906,
+  imdb_id: 'tt1877830',
+  original_language: 'en',
+  original_title: 'The Batman',
+  overview: 'In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.',
+  popularity: 118.246,
+  poster_path: '/74xTEgt7R36Fpooo50r9T25onhq.jpg',
+  production_companies: [
+    {
+      id: 101405,
+      logo_path: null,
+      name: '6th & Idaho',
+      origin_country: 'US'
+    },
+    {
+      id: 119245,
+      logo_path: '/6F45uVsKpNYANcWvplyhgIFezFU.png',
+      name: 'Dylan Clark Productions',
+      origin_country: 'US'
+    },
+    {
+      id: 128064,
+      logo_path: '/13F3Jf7EFAcREU0xzZqJnVnyGXu.png',
+      name: 'DC Films',
+      origin_country: 'US'
+    },
+    {
+      id: 174,
+      logo_path: '/zhD3hhtKB5qyv7ZeL4uLpNxgMVU.png',
+      name: 'Warner Bros. Pictures',
+      origin_country: 'US'
+    }
+  ],
+  production_countries: [
+    {
+      iso_3166_1: 'US',
+      name: 'United States of America'
+    }
+  ],
+  release_date: '2022-03-01',
+  revenue: 771000000,
+  runtime: 177,
+  spoken_languages: [
+    {
+      english_name: 'English',
+      iso_639_1: 'en',
+      name: 'English'
+    }
+  ],
+  status: 'Released',
+  tagline: 'Unmask the truth.',
+  title: 'The Batman',
+  video: false,
+  vote_average: 7.694,
+  vote_count: 9143
+}
+
 export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
 
 export const IMAGE_URL_ORI = 'https://image.tmdb.org/t/p/original'

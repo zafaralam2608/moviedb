@@ -2,6 +2,8 @@ import { CssBaseline, ThemeProvider, Toolbar } from '@mui/material'
 import React from 'react'
 import { darkTheme } from '../constant/theme'
 import Header from './header'
+import { RouterProvider } from 'react-router-dom'
+import router from '../../router'
 
 const App: React.FC = () => {
   return (
@@ -9,7 +11,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <Header />
       <Toolbar />
-      <div>Hello Zed</div>
+      <RouterProvider router= {router} />
     </ThemeProvider>
   )
 }
