@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider, Toolbar } from '@mui/material'
 import React from 'react'
 import { darkTheme } from '../constant/theme'
-import Header from './Header'
+import Header from './header'
 
 const App: React.FC = () => {
   return (

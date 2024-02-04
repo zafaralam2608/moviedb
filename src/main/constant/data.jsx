@@ -7,7 +7,7 @@ export const data = {
       genre_ids: [
         80,
         9648,
-        53,
+        53
       ],
       id: 414906,
       original_language: 'en',
@@ -19,14 +19,14 @@ export const data = {
       title: 'The Batman',
       video: false,
       vote_average: 7.8,
-      vote_count: 5284,
+      vote_count: 5284
     },
     {
       adult: false,
       backdrop_path: '/2va32apQP97gvUxaMnL5wYt4CRB.jpg',
       genre_ids: [
         14,
-        28,
+        28
       ],
       id: 268,
       original_language: 'en',
@@ -38,7 +38,7 @@ export const data = {
       title: 'Batman',
       video: false,
       vote_average: 7.2,
-      vote_count: 6342,
+      vote_count: 6342
     },
     {
       adult: false,
@@ -46,7 +46,7 @@ export const data = {
       genre_ids: [
         28,
         80,
-        18,
+        18
       ],
       id: 272,
       original_language: 'en',
@@ -58,14 +58,14 @@ export const data = {
       title: 'Batman Begins',
       video: false,
       vote_average: 7.7,
-      vote_count: 17815,
+      vote_count: 17815
     },
     {
       adult: false,
       backdrop_path: '/fsJgRuXzNnnXk5IVwVbBPdavaNX.jpg',
       genre_ids: [
         28,
-        14,
+        14
       ],
       id: 364,
       original_language: 'en',
@@ -77,14 +77,14 @@ export const data = {
       title: 'Batman Returns',
       video: false,
       vote_average: 6.9,
-      vote_count: 5294,
+      vote_count: 5294
     },
     {
       adult: false,
       backdrop_path: '/kU7ZiyeUwcpTkYj3UcxSqGdZmxY.jpg',
       genre_ids: [
         16,
-        28,
+        28
       ],
       id: 618353,
       original_language: 'en',
@@ -96,7 +96,7 @@ export const data = {
       title: 'Batman: Death in the Family',
       video: false,
       vote_average: 7.2,
-      vote_count: 323,
+      vote_count: 323
     },
     {
       adult: false,
@@ -104,7 +104,7 @@ export const data = {
       genre_ids: [
         28,
         12,
-        14,
+        14
       ],
       id: 209112,
       original_language: 'en',
@@ -116,7 +116,7 @@ export const data = {
       title: 'Batman v Superman: Dawn of Justice',
       video: false,
       vote_average: 5.9,
-      vote_count: 15899,
+      vote_count: 15899
     },
     {
       adult: false,
@@ -126,7 +126,7 @@ export const data = {
         80,
         16,
         9648,
-        28,
+        28
       ],
       id: 537056,
       original_language: 'en',
@@ -138,7 +138,7 @@ export const data = {
       title: 'Batman: Hush',
       video: false,
       vote_average: 7.3,
-      vote_count: 641,
+      vote_count: 641
     },
     {
       adult: false,
@@ -146,7 +146,7 @@ export const data = {
       genre_ids: [
         878,
         28,
-        14,
+        14
       ],
       id: 415,
       original_language: 'en',
@@ -158,7 +158,7 @@ export const data = {
       title: 'Batman & Robin',
       video: false,
       vote_average: 4.3,
-      vote_count: 4177,
+      vote_count: 4177
     },
     {
       adult: false,
@@ -166,7 +166,7 @@ export const data = {
       genre_ids: [
         28,
         80,
-        14,
+        14
       ],
       id: 414,
       original_language: 'en',
@@ -178,7 +178,7 @@ export const data = {
       title: 'Batman Forever',
       video: false,
       vote_average: 5.4,
-      vote_count: 4301,
+      vote_count: 4301
     },
     {
       adult: false,
@@ -188,7 +188,7 @@ export const data = {
         12,
         35,
         878,
-        80,
+        80
       ],
       id: 2661,
       original_language: 'en',
@@ -200,7 +200,7 @@ export const data = {
       title: 'Batman',
       video: false,
       vote_average: 6.3,
-      vote_count: 653,
+      vote_count: 653
     },
     {
       adult: false,
@@ -208,7 +208,7 @@ export const data = {
       genre_ids: [
         878,
         28,
-        16,
+        16
       ],
       id: 366924,
       original_language: 'en',
@@ -220,7 +220,7 @@ export const data = {
       title: 'Batman: Bad Blood',
       video: false,
       vote_average: 7.2,
-      vote_count: 592,
+      vote_count: 592
     },
     {
       adult: false,
@@ -229,7 +229,7 @@ export const data = {
         16,
         28,
         35,
-        10751,
+        10751
       ],
       id: 324849,
       original_language: 'en',
@@ -241,7 +241,7 @@ export const data = {
       title: 'The Lego Batman Movie',
       video: false,
       vote_average: 7.2,
-      vote_count: 4153,
+      vote_count: 4153
     },
     {
       adult: false,
@@ -251,7 +251,7 @@ export const data = {
         28,
         12,
         80,
-        14,
+        14
       ],
       id: 732450,
       original_language: 'en',
@@ -263,7 +263,7 @@ export const data = {
       title: 'Batman: Soul of the Dragon',
       video: false,
       vote_average: 7,
-      vote_count: 231,
+      vote_count: 231
     },
     {
       adult: false,
@@ -272,7 +272,7 @@ export const data = {
         16,
         9648,
         28,
-        80,
+        80
       ],
       id: 736074,
       original_language: 'en',
@@ -284,7 +284,7 @@ export const data = {
       title: 'Batman: The Long Halloween, Part Two',
       video: false,
       vote_average: 7.7,
-      vote_count: 318,
+      vote_count: 318
     },
     {
       adult: false,
@@ -294,7 +294,7 @@ export const data = {
         28,
         12,
         16,
-        10751,
+        10751
       ],
       id: 45162,
       original_language: 'en',
@@ -306,7 +306,7 @@ export const data = {
       title: 'Superman/Batman: Apocalypse',
       video: false,
       vote_average: 7.2,
-      vote_count: 522,
+      vote_count: 522
     },
     {
       adult: false,
@@ -315,7 +315,7 @@ export const data = {
         878,
         28,
         12,
-        16,
+        16
       ],
       id: 321528,
       original_language: 'en',
@@ -327,7 +327,7 @@ export const data = {
       title: 'Batman vs. Robin',
       video: false,
       vote_average: 7.2,
-      vote_count: 724,
+      vote_count: 724
     },
     {
       adult: false,
@@ -336,7 +336,7 @@ export const data = {
         16,
         9648,
         28,
-        80,
+        80
       ],
       id: 736073,
       original_language: 'en',
@@ -348,7 +348,7 @@ export const data = {
       title: 'Batman: The Long Halloween, Part One',
       video: false,
       vote_average: 7.7,
-      vote_count: 373,
+      vote_count: 373
     },
     {
       adult: false,
@@ -357,7 +357,7 @@ export const data = {
         53,
         16,
         28,
-        80,
+        80
       ],
       id: 242643,
       original_language: 'en',
@@ -369,7 +369,7 @@ export const data = {
       title: 'Batman: Assault on Arkham',
       video: false,
       vote_average: 7.4,
-      vote_count: 907,
+      vote_count: 907
     },
     {
       adult: false,
@@ -377,7 +377,7 @@ export const data = {
       genre_ids: [
         16,
         28,
-        12,
+        12
       ],
       id: 251519,
       original_language: 'en',
@@ -389,7 +389,7 @@ export const data = {
       title: 'Son of Batman',
       video: false,
       vote_average: 7.1,
-      vote_count: 842,
+      vote_count: 842
     },
     {
       adult: false,
@@ -399,7 +399,7 @@ export const data = {
         80,
         28,
         16,
-        9648,
+        9648
       ],
       id: 40662,
       original_language: 'en',
@@ -411,13 +411,13 @@ export const data = {
       title: 'Batman: Under the Red Hood',
       video: false,
       vote_average: 7.8,
-      vote_count: 1274,
-    },
+      vote_count: 1274
+    }
   ],
   total_pages: 7,
-  total_results: 132,
-};
+  total_results: 132
+}
 
-export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
 
-export const IMAGE_URL_ORI = 'https://image.tmdb.org/t/p/original';
+export const IMAGE_URL_ORI = 'https://image.tmdb.org/t/p/original'
