@@ -1,12 +1,10 @@
-import React from 'react';
+import React from 'react'
 import {
-  AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Grid, Typography,
-} from '@mui/material';
-import { KeyboardArrowRightOutlined } from '@mui/icons-material';
-import CardScroll from '../../../common/CardScroll';
-import { MovieImagesProps } from '../../../props/movie/movieImagesProps';
+  AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Grid, Typography
+} from '@mui/material'
+import { KeyboardArrowRightOutlined } from '@mui/icons-material'
 
-function DetailsLeft({ movieImagesData }) {
+const DetailsLeft: React.FC = () => {
   return (
     <Grid container sx={{ width: '860px', justifyContent: 'left' }}>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
@@ -27,7 +25,6 @@ function DetailsLeft({ movieImagesData }) {
         <CardActionArea sx={{ textAlign: 'left', padding: '0 24px', marginBottom: '24px' }} href="#/">
           <Typography paragraph variant="h4">Photos</Typography>
         </CardActionArea>
-        <CardScroll movieImagesData={movieImagesData} height="282px" />
       </Grid>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
         <CardActionArea sx={{ textAlign: 'left' }} href="#/">
@@ -66,11 +63,7 @@ function DetailsLeft({ movieImagesData }) {
         <Divider />
       </Grid>
     </Grid>
-  );
+  )
 }
 
-DetailsLeft.propTypes = {
-  movieImagesData: MovieImagesProps.isRequired,
-};
-
-export default DetailsLeft;
+export default DetailsLeft
