@@ -3,7 +3,6 @@ import { Grid, Paper, ThemeProvider } from '@mui/material'
 import DetailsLeft from './DetailsLeft'
 import DetailsRight from './DetailsRight'
 import { lightTheme } from '../../../constant/theme'
-import { MovieImagesProps } from '../../../props/movie/movieImagesProps'
 
 const Bottom: React.FC = () => {
   return (
@@ -18,10 +17,6 @@ const Bottom: React.FC = () => {
       </Paper>
     </ThemeProvider>
   )
-}
-
-Bottom.propTypes = {
-  movieImagesData: MovieImagesProps.isRequired
 }
 
 export default Bottom

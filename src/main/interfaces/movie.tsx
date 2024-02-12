@@ -1,3 +1,7 @@
+import { type Credits } from './credit'
+import { type Images } from './image'
+import { type Videos } from './video'
+
 export interface Genre {
   id: number
   name: string
@@ -53,4 +57,10 @@ export interface MovieDetails {
   video: boolean
   vote_average: number
   vote_count: number
+}
+
+export interface MovieDetailsFull extends MovieDetails {
+  credits: Credits
+  images: Images
+  videos: Videos
 }

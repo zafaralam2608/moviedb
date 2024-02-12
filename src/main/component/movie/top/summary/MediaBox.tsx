@@ -3,8 +3,8 @@ import { PermMedia, Subscriptions } from '@mui/icons-material'
 import {
   ButtonGroup, CardActionArea, CardMedia, Grid, Typography
 } from '@mui/material'
-import { IMAGE_URL_ORIGINAL, IMAGE_URL_W500 } from '../../../../constant/api'
 import { movieDetails } from '../../../../constant/data'
+import { IMAGE_URL_ORIGINAL, IMAGE_URL_W500 } from '../../../../../api'
 
 const MediaBox: React.FC = () => {
   return (

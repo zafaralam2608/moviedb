@@ -6,7 +6,7 @@ const configuration = {
       'w300',
       'w780',
       'w1280',
-      'original',
+      'original'
     ],
     logo_sizes: [
       'w45',
@@ -15,7 +15,7 @@ const configuration = {
       'w185',
       'w300',
       'w500',
-      'original',
+      'original'
     ],
     poster_sizes: [
       'w92',
@@ -24,20 +24,20 @@ const configuration = {
       'w342',
       'w500',
       'w780',
-      'original',
+      'original'
     ],
     profile_sizes: [
       'w45',
       'w185',
       'h632',
-      'original',
+      'original'
     ],
     still_sizes: [
       'w92',
       'w185',
       'w300',
-      'original',
-    ],
+      'original'
+    ]
   },
   change_keys: [
     'adult',
@@ -92,8 +92,8 @@ const configuration = {
     'tvrage_id',
     'type',
     'video',
-    'videos',
-  ],
-};
+    'videos'
+  ]
+}
 
-export default configuration;
+export default configuration
