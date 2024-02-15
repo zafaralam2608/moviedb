@@ -3,8 +3,27 @@ import {
   AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Grid, Typography
 } from '@mui/material'
 import { KeyboardArrowRightOutlined } from '@mui/icons-material'
+import { useAppSelector } from '../../../../hook'
+import { IMAGE_URL_W185 } from '../../../../api'
 
 const DetailsLeft: React.FC = () => {
+  const { data } = useAppSelector(state => state.movie)
+  const { credits } = data
+  const { cast, crew } = credits
+
+  const directorNames = crew.filter((person) => person.known_for_department === 'Directing')
+    .filter((person) => person.department === 'Directing')
+    .filter((director) => director.job === 'Director')
+    .slice(0, 3)
+    .map((director) => director.name)
+    .join('  -  ')
+
+  const writerNames = crew.filter((person) => person.known_for_department === 'Writing')
+    .filter((writer) => writer.department === 'Writing')
+    .slice(0, 3)
+    .map((writer) => writer.name)
+    .join('  -  ')
+
   return (
     <Grid container sx={{ width: '860px', justifyContent: 'left' }}>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
@@ -33,33 +52,23 @@ const DetailsLeft: React.FC = () => {
       </Grid>
       <Grid container direction="column" sx={{ marginBottom: '8px', padding: '24px 0' }}>
         <Grid container>
-          <CardHeader
-            avatar={<Avatar>T</Avatar>}
-            title="Actor"
-            subheader="Character"
-          />
-          <CardHeader
-            avatar={<Avatar>T</Avatar>}
-            title="Actor"
-            subheader="Character"
-          />
-          <CardHeader
-            avatar={<Avatar>T</Avatar>}
-            title="Actor"
-            subheader="Character"
-          />
-          <CardHeader
-            avatar={<Avatar>T</Avatar>}
-            title="Actor"
-            subheader="Character"
-          />
+          {
+            cast.slice(0, 18).map((actor) => (
+              <CardHeader
+                key={actor.id}
+                avatar={<Avatar src={IMAGE_URL_W185 + actor.profile_path}/>}
+                title={actor.name}
+                subheader={actor.character}
+              />
+            ))
+          }
         </Grid>
         <Divider />
-        <Typography variant="body1" sx={{ margin: '10px' }}>Director</Typography>
+        <Typography variant="body1" sx={{ margin: '10px' }}><b>Directors</b>    {directorNames}</Typography>
         <Divider />
-        <Typography variant="body1" sx={{ margin: '10px' }}>Writers</Typography>
+        <Typography variant="body1" sx={{ margin: '10px' }}><b>Writers</b>    {writerNames}</Typography>
         <Divider />
-        <Typography variant="body1" sx={{ margin: '10px' }}>All cast & crew</Typography>
+        <Typography variant="body1" sx={{ margin: '10px' }}><b>All cast & crew</b></Typography>
         <Divider />
       </Grid>
     </Grid>

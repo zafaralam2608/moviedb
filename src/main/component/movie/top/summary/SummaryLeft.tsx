@@ -23,7 +23,7 @@ const SummaryLeft: React.FC = () => {
     .join('  -  ')
 
   const writerNames = crew.filter((person) => person.known_for_department === 'Writing')
-    .filter((writer) => writer.department === 'Writer')
+    .filter((writer) => writer.department === 'Writing')
     .slice(0, 3)
     .map((writer) => writer.name)
     .join('  -  ')
