@@ -3,7 +3,7 @@ import Movie from './main/component/movie'
 import { createBrowserRouter } from 'react-router-dom'
 
 const routes = [{
-  path: '/title', element: <Movie />
+  path: '/title/:id', element: <Movie />
 }]
 
 const router = createBrowserRouter(routes)

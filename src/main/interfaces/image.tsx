@@ -10,6 +10,6 @@ export interface Image {
 
 export interface Images {
   backdrops: Image[]
-  logos: Images[]
-  posters: Images[]
+  logos: Image[]
+  posters: Image[]
 }

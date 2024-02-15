@@ -2,19 +2,21 @@ import React from 'react'
 import { Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import { Grade, StarBorder } from '@mui/icons-material'
-import { movieDetails } from '../../../constant/data'
+import { useAppSelector } from '../../../../hook'
 
 const TitleBar: React.FC = () => {
+  const { data } = useAppSelector(state => state.movie)
+
   return (
     <Grid container>
       <Grid container direction='column'>
         <Grid>
-          <Typography>{movieDetails.original_title}</Typography>
+          <Typography>{data.original_title}</Typography>
         </Grid>
         <Grid>
           <Stack direction='row' divider={<p> . </p>}>
-            <Typography>{movieDetails.release_date.split('-')[0]}</Typography>
-            <Typography>{movieDetails.runtime}</Typography>
+            <Typography>{data.release_date.split('-')[0]}</Typography>
+            <Typography>{data.runtime}</Typography>
           </Stack>
         </Grid>
       </Grid>
@@ -22,8 +24,8 @@ const TitleBar: React.FC = () => {
         <Grid container direction='column'>
           <Typography>IMDb Rating</Typography>
           <Grade />
-          <Typography>{movieDetails.vote_average} / 10</Typography>
-          <Typography>{movieDetails.vote_count}</Typography>
+          <Typography>{data.vote_average} / 10</Typography>
+          <Typography>{data.vote_count}</Typography>
         </Grid>
         <Grid container direction='column'>
           <Typography>YOUR RATING</Typography>
@@ -32,7 +34,7 @@ const TitleBar: React.FC = () => {
         </Grid>
         <Grid container direction='column'>
           <Typography>POPULARITY</Typography>
-          <Typography>{movieDetails.popularity}</Typography>
+          <Typography>{data.popularity}</Typography>
         </Grid>
       </Grid>
     </Grid>

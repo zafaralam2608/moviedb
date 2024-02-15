@@ -10,9 +10,7 @@ if (element == null) { throw new Error('Failed to find the root element') }
 const root = ReactDOM.createRoot(element)
 
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>
 )

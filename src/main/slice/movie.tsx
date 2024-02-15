@@ -1,6 +1,8 @@
-import { createAsyncThunk, createSelector, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { type AxiosError } from 'axios'
 import config from '../../config'
+import { type MovieDetailsFull } from '../interfaces/movie'
+import { movieDetailsFull } from '../constant/data'
 
 export const retrieveMovieDetails = createAsyncThunk('movieDetails/retrieve', async (id: number, thunkApi) => {
   try {
@@ -12,14 +14,20 @@ export const retrieveMovieDetails = createAsyncThunk('movieDetails/retrieve', as
   }
 })
 
-const initialState = {
+interface MovieDetailsState {
+  loaded: boolean
+  error: string
+  data: MovieDetailsFull
+}
+
+const initialState: MovieDetailsState = {
   loaded: false,
   error: '',
-  data: {}
+  data: movieDetailsFull
 }
 
 const movieDetailsSlice = createSlice({
-  name: 'movieDetails',
+  name: 'movie',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -30,15 +38,11 @@ const movieDetailsSlice = createSlice({
       state.loaded = true
       state.error = 'Error retreiving movie details'
     })
-    builder.addCase(retrieveMovieDetails.fulfilled, (state, data) => {
+    builder.addCase(retrieveMovieDetails.fulfilled, (state, action) => {
       state.loaded = true
-      state.data = data.payload
+      state.data = action.payload
     })
   }
 })
-
-export const selectMovieDetails = createSelector((state) => ({
-  movieDetails: state.movieDetails
-}), (state) => state)
 
 export default movieDetailsSlice.reducer
