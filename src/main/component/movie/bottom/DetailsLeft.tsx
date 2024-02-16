@@ -1,10 +1,12 @@
 import React from 'react'
 import {
-  AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Grid, Typography
+  AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Typography
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import { KeyboardArrowRightOutlined } from '@mui/icons-material'
 import { useAppSelector } from '../../../../hook'
 import { IMAGE_URL_W185 } from '../../../../api'
+import CardScroll from '../../../common/CardScroll'
 
 const DetailsLeft: React.FC = () => {
   const { data } = useAppSelector(state => state.movie)
@@ -38,7 +40,7 @@ const DetailsLeft: React.FC = () => {
         <CardActionArea sx={{ textAlign: 'left' }} href="#/">
           <Typography paragraph variant="h4">Videos</Typography>
         </CardActionArea>
-        <Grid item sx={{ height: '282px' }}>TODO Vid</Grid>
+        <Grid sx={{ height: '282px' }}>TODO Vid</Grid>
       </Grid>
       <Grid container sx={{ width: '100%', marginBottom: '8px', padding: '24px 0' }}>
         <CardActionArea sx={{ textAlign: 'left', padding: '0 24px', marginBottom: '24px' }} href="#/">

@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Accordion, AccordionSummary, Grid, IconButton, Stack
+  Accordion, AccordionSummary, IconButton, Stack
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import { ConfirmationNumber, KeyboardArrowDownOutlined } from '@mui/icons-material'
 
 const SummaryRight: React.FC = () => {

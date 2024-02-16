@@ -1,8 +1,9 @@
 import React from 'react'
 import { PermMedia, Subscriptions } from '@mui/icons-material'
 import {
-  ButtonGroup, CardActionArea, CardMedia, Grid, Typography
+  ButtonGroup, CardActionArea, CardMedia, Typography
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import { IMAGE_URL_ORIGINAL, IMAGE_URL_W500 } from '../../../../../api'
 import { useAppSelector } from '../../../../../hook'
 
@@ -17,10 +18,10 @@ const MediaBox: React.FC = () => {
 
   return (
     <Grid container sx={{ margin: '0 24px 8px 24px' }}>
-      <Grid item>
+      <Grid>
         <CardMedia component="img" image={IMAGE_URL_W500 + data.poster_path} alt="poster" width="284.44px" height="420.96px" />
       </Grid>
-      <Grid item sx={{ margin: '0 4px' }}>
+      <Grid sx={{ margin: '0 4px' }}>
         <CardMedia component="img" image={IMAGE_URL_ORIGINAL + data.backdrop_path} alt="video" width="746.44px" height="419.87px" />
       </Grid>
       <ButtonGroup orientation="vertical" sx={{ width: '193.13px', height: '420.96px', justifyContent: 'space-evenly' }}>

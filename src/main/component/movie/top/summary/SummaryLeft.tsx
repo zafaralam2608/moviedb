@@ -1,7 +1,8 @@
 import React from 'react'
 import {
-  Chip, Divider, Grid, Stack, Typography
+  Chip, Divider, Stack, Typography
 } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import { useAppSelector } from '../../../../../hook'
 import { type Genre } from '../../../../interfaces/movie'
 

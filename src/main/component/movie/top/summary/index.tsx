@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import MediaBox from './MediaBox'
 import SummaryLeft from './SummaryLeft'
 import SummaryRight from './SummaryRight'

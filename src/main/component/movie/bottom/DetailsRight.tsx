@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 
 const DetailsLeft: React.FC = () => {
   return (

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Grid, Paper, ThemeProvider } from '@mui/material'
+import { Paper, ThemeProvider } from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
 import DetailsLeft from './DetailsLeft'
 import DetailsRight from './DetailsRight'
 import { lightTheme } from '../../../constant/theme'
