@@ -46,6 +46,7 @@ const DetailsLeft: React.FC = () => {
         <CardActionArea sx={{ textAlign: 'left', padding: '0 24px', marginBottom: '24px' }} href="#/">
           <Typography paragraph variant="h4">Photos</Typography>
         </CardActionArea>
+        <CardScroll />
       </Grid>
       <Grid container sx={{ marginBottom: '8px', padding: '24px 0' }}>
         <CardActionArea sx={{ textAlign: 'left' }} href="#/">
