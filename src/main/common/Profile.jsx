@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Accordion, AccordionSummary, Avatar, Box, ButtonGroup, CardActionArea, CardHeader, Chip, Divider,
-  Grid, Stack, Typography,
+  Grid2 as Grid, Stack, Typography,
 } from '@mui/material';
 import { ExpandMore, PermMedia, Subscriptions } from '@mui/icons-material';
 import profile from '../constant/profile';

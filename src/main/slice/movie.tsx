@@ -36,7 +36,7 @@ const movieDetailsSlice = createSlice({
     })
     builder.addCase(retrieveMovieDetails.rejected, (state) => {
       state.loaded = true
-      state.error = 'Error retreiving movie details'
+      state.error = 'Error retrieving movie details'
     })
     builder.addCase(retrieveMovieDetails.fulfilled, (state, action) => {
       state.loaded = true

@@ -3,7 +3,7 @@ import { PermMedia, Subscriptions } from '@mui/icons-material'
 import {
   ButtonGroup, CardActionArea, CardMedia, Typography
 } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid2'
 import { IMAGE_URL_ORIGINAL, IMAGE_URL_W500 } from '../../../../../api'
 import { useAppSelector } from '../../../../../hook'
 

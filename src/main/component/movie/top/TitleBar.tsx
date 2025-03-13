@@ -1,6 +1,6 @@
 import React from 'react'
 import { Stack, Typography } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid2'
 import { Grade, StarBorder } from '@mui/icons-material'
 import { useAppSelector } from '../../../../hook'
 

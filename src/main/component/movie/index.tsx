@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid2 } from '@mui/material'
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { retrieveMovieDetails } from '../../slice/movie'
@@ -16,10 +16,10 @@ const Movie: React.FC = () => {
   }, [dispatch, id])
 
   return (
-    <Grid container>
+    <Grid2 container>
       <Top />
       <Bottom />
-    </Grid>
+    </Grid2>
   )
 }
 

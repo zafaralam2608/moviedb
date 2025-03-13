@@ -1,5 +1,5 @@
 import React from 'react'
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid2'
 import ActionBar from './ActionBar'
 import TitleBar from './TitleBar'
 import Summary from './summary'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid2 as Grid} from '@mui/material';
 import { data } from '../constant/data';
 import Thumbnail from './Thumbnail';
 

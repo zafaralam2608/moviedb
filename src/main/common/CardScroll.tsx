@@ -1,5 +1,5 @@
 import { CardMedia } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid2'
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
 import { IMAGE_URL_W500 } from '../../api'

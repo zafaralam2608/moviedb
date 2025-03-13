@@ -2,7 +2,7 @@ import React from 'react'
 import {
   AccordionSummary, Avatar, CardActionArea, CardHeader, Divider, Typography
 } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import Grid from '@mui/material/Grid2'
 import { KeyboardArrowRightOutlined } from '@mui/icons-material'
 import { useAppSelector } from '../../../../hook'
 import { IMAGE_URL_W185 } from '../../../../api'
