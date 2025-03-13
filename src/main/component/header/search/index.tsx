@@ -1,21 +1,30 @@
 import {Autocomplete, Box, Link, TextField, Typography} from '@mui/material'
 import React, {useEffect, useState} from 'react'
-import {data} from '../../../constant/data'
-import {type SearchMultiResults} from '../../../interfaces/search'
+import {useSearchMovieQuery} from 'services/search';
 
 const Search: React.FC = () => {
-  const [results, setResults] = useState<SearchMultiResults[]>([])
+  const [query, setQuery] = useState<string>('')
+  const [q, setQ] = useState<string>('')
+  const {data: results = [], isLoading} = useSearchMovieQuery(q, {skip: q.length < 3});
 
   useEffect(() => {
-    setResults(data.results)
-  }, [])
+    const timeoutId = setTimeout(() => {
+      setQ(query)
+    }, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [query])
 
   return (
     <Autocomplete
       forcePopupIcon={false}
       disableClearable
+      clearOnEscape
       sx={{width: 582}}
+      loading={isLoading}
       options={results}
+      onInputChange={(e, newValue) => {
+        setQuery(newValue)
+      }}
       renderInput={(params) => <TextField {...params} />}
       getOptionLabel={(option) => option.original_title}
       renderOption={(props, option) =>
