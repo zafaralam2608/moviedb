@@ -5,25 +5,25 @@
   "homepage": "https://zafaralam2608.github.io/moviedb",
   "dependencies": {
     "@emotion/react": "^11.14.0",
-    "@emotion/styled": "11.14.0",
-    "@mui/icons-material": "^7.0.0",
-    "@mui/material": "^7.0.0",
-    "@reduxjs/toolkit": "^2.6.1",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
+    "@reduxjs/toolkit": "^2.8.2",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.13.13",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
+    "@types/node": "^22.15.23",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
     "@types/redux-logger": "^3.0.13",
-    "axios": "^1.8.4",
-    "prop-types": "15.8.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "axios": "^1.9.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-material-ui-carousel": "^3.4.2",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.4.0",
+    "react-router-dom": "^7.6.1",
     "react-scripts": "^5.0.1",
     "redux-logger": "^3.0.6",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,11 +45,11 @@
     ]
   },
   "devDependencies": {
-    "@eslint/js": "^9.23.0",
-    "eslint": "^9.23.0",
-    "eslint-plugin-react": "^7.37.4",
-    "globals": "^16.0.0",
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
     "prettier": "^3.5.3",
-    "typescript-eslint": "^8.28.0"
+    "typescript-eslint": "^8.33.0"
   }
 }
