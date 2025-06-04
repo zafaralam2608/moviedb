@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/moviedb/static/js/main.f00523a8.js",
-    "index.html": "/moviedb/index.html"
+    "main.js": "/moviedb/static/js/main.43e7f01a.js",
+    "index.html": "/moviedb/index.html",
+    "main.43e7f01a.js.map": "/moviedb/static/js/main.43e7f01a.js.map"
   },
   "entrypoints": [
-    "static/js/main.f00523a8.js"
+    "static/js/main.43e7f01a.js"
   ]
 }
