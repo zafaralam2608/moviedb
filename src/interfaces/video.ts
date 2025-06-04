@@ -1,4 +1,4 @@
-export interface Video {
+export interface IVideo {
   iso_639_1: string;
   iso_3166_1: string;
   name: string;
@@ -11,6 +11,6 @@ export interface Video {
   id: string;
 }
 
-export interface Videos {
-  results: Video[];
+export interface IVideos {
+  results: IVideo[];
 }

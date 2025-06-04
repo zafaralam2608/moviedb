@@ -1,4 +1,4 @@
-export interface SearchMultiResults {
+export interface ISearchMultiResults {
   adult: boolean;
   backdrop_path: string;
   id: number;
@@ -15,9 +15,9 @@ export interface SearchMultiResults {
   vote_count: number;
 }
 
-export interface SearchMulti {
+export interface ISearchMulti {
   page: number;
-  results: SearchMultiResults[];
+  results: ISearchMultiResults[];
   total_pages: number;
   total_results: number;
 }

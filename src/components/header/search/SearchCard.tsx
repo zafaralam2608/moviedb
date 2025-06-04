@@ -1,12 +1,12 @@
 import { Card, CardActionArea, CardHeader, CardMedia } from "@mui/material";
 import { IMAGE_URL_W185 } from "api";
-import { SearchMultiResults } from "interfaces/search";
+import { ISearchMultiResults } from "interfaces/search";
 import React, { useState } from "react";
 
 const FALLBACK_IMAGE = `${process.env.PUBLIC_URL}/imagenotfound.png`;
 
 export interface SearchCardProps {
-  option: SearchMultiResults;
+  option: ISearchMultiResults;
 }
 
 export const SearchCard: React.FC<SearchCardProps> = ({ option }) => {
@@ -20,7 +20,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({ option }) => {
     <Card>
       <CardActionArea
         sx={{ display: "flex", justifyContent: "left" }}
-        href={`/title/${option.id}`}
+        href={`/movie/${option.id}`}
       >
         <CardMedia
           component="img"

@@ -1,4 +1,4 @@
-export interface Image {
+export interface IImage {
   aspect_ratio: number;
   height: number;
   iso_639_1: string | null;
@@ -8,8 +8,8 @@ export interface Image {
   width: number;
 }
 
-export interface Images {
-  backdrops: Image[];
-  logos: Image[];
-  posters: Image[];
+export interface IImages {
+  backdrops: IImage[];
+  logos: IImage[];
+  posters: IImage[];
 }
