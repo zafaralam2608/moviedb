@@ -20,7 +20,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({ option }) => {
     <Card>
       <CardActionArea
         sx={{ display: "flex", justifyContent: "left" }}
-        href={`/movie/${option.id}`}
+        href={`#/movie/${option.id}`}
       >
         <CardMedia
           component="img"

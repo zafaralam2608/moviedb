@@ -1,12 +1,12 @@
+import Dashboard from "pages/dashboard";
 import Movie from "pages/movie";
-import React from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 const routes = [
-  { path: "/", element: <></> },
-  { path: "/movie/:id", element: <Movie /> },
+  { path: "/", Component: Dashboard },
+  { path: "/movie/:id", Component: Movie },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createHashRouter(routes);
 
 export default router;
