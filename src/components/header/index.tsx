@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Button href="../">MovieDB</Button>
+          <Button href="/#">MovieDB</Button>
           <Button>
             <Typography
               variant="h6"
