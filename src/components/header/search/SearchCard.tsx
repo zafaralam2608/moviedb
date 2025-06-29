@@ -7,9 +7,10 @@ const FALLBACK_IMAGE = `${process.env.PUBLIC_URL}/imagenotfound.png`;
 
 export interface SearchCardProps {
   option: ISearchMultiResults;
+  onSelect?: () => void;
 }
 
-export const SearchCard: React.FC<SearchCardProps> = ({ option }) => {
+export const SearchCard: React.FC<SearchCardProps> = ({ option, onSelect }) => {
   const [imgSrc, setImgSrc] = useState<string>(
     option.poster_path
       ? `${IMAGE_URL_W185}/${option.poster_path}`
@@ -21,6 +22,7 @@ export const SearchCard: React.FC<SearchCardProps> = ({ option }) => {
       <CardActionArea
         sx={{ display: "flex", justifyContent: "left" }}
         href={`#/movie/${option.id}`}
+        onClick={onSelect}
       >
         <CardMedia
           component="img"
