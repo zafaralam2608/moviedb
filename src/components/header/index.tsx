@@ -7,7 +7,6 @@ const Header: React.FC = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Button href="#/">MovieDB</Button>
           <Button>
             <Typography
               variant="h6"
@@ -25,6 +24,9 @@ const Header: React.FC = () => {
             >
               Menu
             </Typography>
+          </Button>
+          <Button href="#/" sx={{ backgroundColor: "#f5c518", fontWeight: 900, color: "#000", letterSpacing: 1, textTransform: "none", m: 1 }}>
+            MovieDB
           </Button>
           <Search />
         </Toolbar>
