@@ -64,8 +64,8 @@ const Movie: React.FC = () => {
 
   return (
     <Grid container>
-      <Grid container justifyContent="center">
-        <Grid container direction="column" width="1280px">
+      <Grid container sx={{ justifyContent: "center" }}>
+        <Grid container sx={{ flexDirection: "column", width: "1280px" }}>
           <Toolbar>TODO ActionBar</Toolbar>
           <Toolbar>{data.original_title}</Toolbar>
           <Grid container>
@@ -98,13 +98,13 @@ const Movie: React.FC = () => {
               >
                 <CardActionArea sx={{ textAlign: "center" }} href="#/">
                   <Subscriptions sx={{ fontSize: 40 }} />
-                  <Typography paragraph variant="caption">
+                  <Typography component="p" variant="caption">
                     {videosTxt}
                   </Typography>
                 </CardActionArea>
                 <CardActionArea sx={{ textAlign: "center" }} href="#/">
                   <PermMedia sx={{ fontSize: 40 }} />
-                  <Typography paragraph variant="caption">
+                  <Typography component="p" variant="caption">
                     {imagesTxt}
                   </Typography>
                 </CardActionArea>
@@ -119,10 +119,9 @@ const Movie: React.FC = () => {
             >
               <Grid
                 container
-                direction="column"
-                sx={{ width: "727px", justifyContent: "left" }}
+                sx={{ width: "727px", justifyContent: "left", flexDirection: "column" }}
               >
-                <Grid container direction="column" sx={{ padding: "16px 0" }}>
+                <Grid container sx={{ padding: "16px 0", flexDirection: "column" }}>
                   <Stack
                     direction="row"
                     spacing={1}
@@ -132,11 +131,11 @@ const Movie: React.FC = () => {
                       <Chip key={`chip-${item.name}`} label={item.name} />
                     ))}
                   </Stack>
-                  <Typography paragraph variant="body1">
+                  <Typography component="p" variant="body1">
                     {data.overview}
                   </Typography>
                 </Grid>
-                <Grid container direction="column">
+                <Grid container sx={{ flexDirection: "column" }}>
                   <Divider />
                   <Typography variant="body1" sx={{ margin: "10px" }}>
                     <b>{directorTxt}</b>
@@ -154,14 +153,14 @@ const Movie: React.FC = () => {
               </Grid>
               <Grid
                 container
-                direction="column"
                 sx={{
                   width: "425px",
                   justifyContent: "left",
                   paddingTop: "16px",
+                  flexDirection: "column",
                 }}
               >
-                <Grid container direction="column">
+                <Grid container sx={{ flexDirection: "column" }}>
                   <Accordion
                     sx={{ marginBottom: "8px", padding: "0 16px 0 12px" }}
                   >

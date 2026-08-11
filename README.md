@@ -31,6 +31,6 @@ Use the below commands to launch the app
 ```
 git clone https://github.com/zafaralam2608/moviedb.git
 cd moviedb
-npm install
-npm start
+yarn install
+yarn start
 ```
