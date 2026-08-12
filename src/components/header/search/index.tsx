@@ -30,7 +30,13 @@ const Search: React.FC = () => {
       forcePopupIcon={false}
       disableClearable
       clearOnEscape
-      sx={{ width: 582 }}
+      sx={{
+        width: 582,
+        p: 0,
+        "& .MuiAutocomplete-inputRoot": {
+          p: 0,
+        },
+      }}
       loading={isLoading}
       loadingText="TODO"
       noOptionsText={!isLoading && query && `See all results for "${query}"`}
