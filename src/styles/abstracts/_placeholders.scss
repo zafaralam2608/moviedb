@@ -1,0 +1,68 @@
+@use 'mixins' as *;
+@use 'palette' as *;
+@use 'tokens' as *;
+
+// Inheritance
+
+%fill-layer {
+  @include fill;
+}
+
+%cover-image {
+  @include cover;
+
+  display: block;
+}
+
+%scrim {
+  @include fill;
+  @include scrim;
+}
+
+%media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: $radius-lg;
+}
+
+%caps-label {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+%accent-bar {
+  width: 4px;
+  height: 28px;
+  border-radius: $radius-sm;
+  background-color: palette(primary-main);
+}
+
+// Corner + button pinned to top left of a poster
+%poster-add {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+}
+
+%pill {
+  height: $pill-height;
+  border-radius: $pill-height * 0.5;
+}
+
+%divider-top {
+  border-top: 1px solid palette(divider);
+}
+
+%divider-bottom {
+  border-bottom: 1px solid palette(divider);
+}
+
+%clamp-2 {
+  @include line-clamp(2);
+}
+
+%clamp-3 {
+  @include line-clamp(3);
+}

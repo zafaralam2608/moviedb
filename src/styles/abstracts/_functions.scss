@@ -1,0 +1,5 @@
+@use 'tokens' as *;
+
+@function space($multiplier) {
+  @return $multiplier * $space-unit;
+}

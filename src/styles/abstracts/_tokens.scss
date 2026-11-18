@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use 'palette' as *;
+
+// Spacing follows the 8px grid used by the MUI theme.
+$space-unit: 8px;
+
+// Mirrors the theme breakpoints
+$breakpoints: (
+        'sm': 600px,
+        'md': 900px,
+        'lg': 1200px,
+);
+
+// Corner radii
+$radius-xs: calc(var(--mui-shape-borderRadius) / 2);
+$radius-sm: var(--mui-shape-borderRadius);
+$radius-lg: calc(var(--mui-shape-borderRadius) * 2);
+
+$pill-height: 60px;
+
+// 2:3 poster card ratio
+$poster-card-width: 166px;
+$poster-card-height: $poster-card-width * 1.5;
+
+// 16:9 interest card ratio
+$interest-card-width: 166px;
+$interest-card-height: $interest-card-width * 0.5625;
+
+$on-media: palette(common-white);
+$media-bg: palette(common-black);
+
+$overlay-bg-strong: palette-alpha(common-black, 50%);
+$divider-on-primary: palette-alpha(primary-contrastText, 35%);
+
+$scrim-opacity: 0.7;
