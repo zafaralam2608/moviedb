@@ -1,0 +1,13 @@
+@use '@/styles/abstracts' as *;
+
+.logo {
+  flex-shrink: 0;
+  padding: space(0.25) space(1.5);
+  border-radius: $radius-xs;
+  background-color: palette(primary-main);
+  color: palette(primary-contrastText);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}

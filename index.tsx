@@ -1,5 +1,6 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { App } from './src/app'
 
 const element = document.getElementById('root')
 if (element == null) {
@@ -8,6 +9,6 @@ if (element == null) {
 
 createRoot(element).render(
   <StrictMode>
-    <div>Hello World</div>
+    <App />
   </StrictMode>,
 )

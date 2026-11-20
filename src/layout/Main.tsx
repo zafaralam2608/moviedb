@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useMemo, useState } from 'react'
 import { Stack, useColorScheme } from '@mui/material'
 import { useMatch } from 'react-router'
 import { paths } from '@/app/paths.ts'
-import styles from '@styles/layout/Main.module.scss'
+import styles from '@/styles/layout/Main.module.scss'
 import { TopBar } from '@/layout/TopBar.tsx'
 
 export const Main = (): React.JSX.Element => {

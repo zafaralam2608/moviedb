@@ -5,5 +5,5 @@
 
 // A theme color at the given opacity, e.g. `palette-alpha(common-black, 60%)`.
 @function palette-alpha($name, $alpha) {
-  @return color-mix(in srgb, palette(($name) $alpha, transparent));
+  @return color-mix(in srgb, palette($name) $alpha, transparent);
 }
